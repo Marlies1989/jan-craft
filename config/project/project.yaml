@@ -1,0 +1,22 @@
+dateModified: 1687853313
+email:
+  fromEmail: marlies@twokings.nl
+  fromName: jan
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    7bf1eeac-7dfd-4084-b314-db5a770f32b7: jan # jan
+    265ed1e3-cc19-48f3-89d9-a079c0f61868: jan # jan
+    783d697f-64e2-4b9b-a65c-fe7c3b695830: Common # Common
+system:
+  edition: solo
+  live: true
+  name: jan
+  schemaVersion: 4.4.0.4
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

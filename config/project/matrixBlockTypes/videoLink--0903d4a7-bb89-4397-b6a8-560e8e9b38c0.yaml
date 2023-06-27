@@ -1,0 +1,105 @@
+field: 126a3df0-9cbf-4ff6-af83-264b49d99fda # Link to video
+fieldLayouts:
+  bc52d305-42c9-4235-9695-c5bf2c5cb7af:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 82b380ba-a677-4184-91d8-adc4d50000c0 # Text
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 18321011-373c-4053-9952-036785170cf4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ae66b30b-c6c1-4864-a6e8-8d038eb175f3 # Tooltip text
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 04511680-d67c-4356-8a30-29a6c5a955fb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e8245024-7ebb-490a-a575-04aa23353167 # Video
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e01a6123-38aa-4b0e-aa4c-d35ba533ca15
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 72ea5a53-414d-4584-89c6-f29d69d4779a
+        userCondition: null
+fields:
+  82b380ba-a677-4184-91d8-adc4d50000c0: # Text
+    columnSuffix: yadxslib
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: 'Create the visible text for the link here'
+    name: Text
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 1
+      multiline: true
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  ae66b30b-c6c1-4864-a6e8-8d038eb175f3: # Tooltip text
+    columnSuffix: rtpmwzce
+    contentColumnType: text
+    fieldGroup: null
+    handle: tooltipText
+    instructions: 'Create the text for the tooltip here.'
+    name: 'Tooltip text'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 1
+      multiline: true
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  e8245024-7ebb-490a-a575-04aa23353167: # Video
+    columnSuffix: ptymppfb
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: video
+    instructions: 'Link to the video '
+    name: Video
+    searchable: false
+    settings:
+      maxLength: 255
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+handle: videoLink
+name: VideoLink
+sortOrder: 1

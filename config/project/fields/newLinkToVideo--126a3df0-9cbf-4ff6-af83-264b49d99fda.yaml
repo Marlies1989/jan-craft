@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 963c1f65-1bfd-41ed-aa2a-bc609f386a49 # Page
+handle: newLinkToVideo
+instructions: 'Use this block to create a new link'
+name: 'Link to video'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_newlinktovideo}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

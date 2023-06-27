@@ -1,0 +1,77 @@
+{# <!DOCTYPE html>
+<html lang="{{ craft.app.language }}">
+  <head>
+    <meta charset="utf-8"/>
+    <title>{{ siteName }}</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    {% do craft.app.view.registerCssFile('@web/assets/css/app.css') %}
+  </head>
+
+  <body>
+    {% block content %} #}
+      {# Nothing here, yet! #}
+    {# {% endblock %}
+  </body>
+</html> #}
+
+
+{#
+    This is necessary for the Language Switcher. In case there is no translation for an entry the Site Switcher plugin will
+    redirect to the homepage.
+    Read https://github.com/doublesecretagency/craft-siteswitcher/blob/v2/README.md#fall-back-to-the-translated-homepage
+#}
+{# {% set element = (category ?? entry ?? null) %} #}
+
+{#
+    Use the variable to check wether the language is english or dutch or set the lang attribute.
+    Possible value is: "en" or "nl"
+#}
+{# {% set lang = currentSite.language %} #}
+
+<!DOCTYPE html>
+<html lang="{{ craft.app.language }}">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="web/assets/css/app.css">
+        <title>{% if entry is defined and entry.title is not empty %}{{ entry.title }} | {% endif %} {{ systemName }}</title>
+         {% do craft.app.view.registerCssFile('@web/assets/css/app.css') %}
+    </head>
+
+    <body>
+
+     <div class="container">
+        <div class="flex-box">
+
+          <header>
+              {% include '_layout/_header.twig'%}
+          </header>
+
+              {% block main %}
+              {% endblock %}
+
+        </div>
+
+          <footer>
+              {% include '_layout/_footer.twig'%}
+          </footer>
+
+      </div>
+
+        <!-- must be above all other scipts -->
+        <script src="https://unpkg.com/@popperjs/core@2"></script>
+        <script src="https://unpkg.com/tippy.js@6"></script>
+        <!--  -->
+        <!-- media screen for overlay max-width:800px -->
+        <script src="web/assets/js/Tippy.js"></script>
+        <script src="web/assets/js/disablescroll.js"></script>
+
+        <script src="web/assets/js/video-overlay.js"></script>
+        <script src="https://kit.fontawesome.com/f00e0f6e3c.js" crossorigin="anonymous"></script>
+        <script src="http://jan-craft.ddev.site/assets/js/script.js" crossorigin="anonymous"></script>
+
+    </body>
+
+</html>

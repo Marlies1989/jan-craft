@@ -1,0 +1,19 @@
+columnSuffix: psnarsxu
+contentColumnType: text
+fieldGroup: 963c1f65-1bfd-41ed-aa2a-bc609f386a49 # Page
+handle: pageQuoteBlock
+instructions: 'This block creates the highlighted quote on a webpage'
+name: 'Page quote block'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 1
+  multiline: true
+  placeholder: 'Here should be a quote '
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

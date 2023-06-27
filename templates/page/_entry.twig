@@ -1,0 +1,48 @@
+{% extends '_layout/_base.twig' %}
+
+{% block main %}
+
+{% set pageQuoteBlock = entry.pageQuoteBlock %}
+<main>
+  <blockquote> {{ entry.pageQuoteBlock }} </blockquote>
+
+      <div id="home-tekst" class="page-tekst">
+        <h3>{{ entry.title }}</h3>
+
+            {% set newLinkToVideo = entry.newLinkToVideo.all() %}
+                {% for contentBlock in newLinkToVideo %}
+
+                    {% set blockType = contentBlock.type.handle %}
+
+                        {% if blockType == 'videoLink' %}
+
+            <ol class="list-tooltips">
+            <li data-template="1" id="tooltip"><div onclick="openNav(), disableScroll()"></div><a>{{ contentBlock.text }}</a></li>
+            </ol>
+
+        </div>
+</main>
+
+ <!-- video -->
+   <div id="myNav" class="overlay">
+    <div onclick="closeNav(), enableScroll()" class="overlay-content">
+      <div class="video-wrapper">
+        <iframe width="1280" height="720px" allow="autoplay" src="{{ contentBlock.video }}"></iframe>
+      </div>
+    </div>
+
+<div class="tippy-content" style="display: none;">
+    <div style="display: none;">
+      <div id="loop.length">
+        <h4>{{ contentBlock.text }}</h4>
+        <a>{{ contentBlock.tooltipText }}</a>
+        <a a onclick=" openNav(), disableScroll()">watch video</a>
+      </div>
+    </div>
+</div>
+
+   {% endif %}
+
+   {% endfor %}
+
+{% endblock %}

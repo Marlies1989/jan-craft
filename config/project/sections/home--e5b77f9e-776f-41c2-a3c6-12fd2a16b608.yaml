@@ -1,12 +1,12 @@
 defaultPlacement: end
 enableVersioning: true
-handle: page
-name: Page
+handle: home
+name: Home
 propagationMethod: all
 siteSettings:
   265ed1e3-cc19-48f3-89d9-a079c0f61868: # jan
     enabledByDefault: true
     hasUrls: true
-    template: page/_entry2.twig
-    uriFormat: 'page/{slug}'
-type: channel
+    template: index.twig
+    uriFormat: __home__
+type: single

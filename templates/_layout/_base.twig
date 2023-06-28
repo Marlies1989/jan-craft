@@ -35,9 +35,11 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="web/assets/css/app.css">
+        {# <link rel="stylesheet" href="web/assets/css/app.css"> #}
         <title>{% if entry is defined and entry.title is not empty %}{{ entry.title }} | {% endif %} {{ systemName }}</title>
-         {% do craft.app.view.registerCssFile('@web/assets/css/app.css') %}
+         {# {% do craft.app.view.registerCssFile('@web/assets/css/app.css') %} #}
+
+         {% css "/assets/css/app.css" %}
     </head>
 
     <body>
@@ -61,16 +63,15 @@
       </div>
 
         <!-- must be above all other scipts -->
-        <script src="https://unpkg.com/@popperjs/core@2"></script>
-        <script src="https://unpkg.com/tippy.js@6"></script>
-        <!--  -->
-        <!-- media screen for overlay max-width:800px -->
-        <script src="web/assets/js/Tippy.js"></script>
-        <script src="web/assets/js/disablescroll.js"></script>
+        {% js "https://unpkg.com/@popperjs/core@2" %}
+        {% js "https://unpkg.com/tippy.js@6" %}
 
-        <script src="web/assets/js/video-overlay.js"></script>
-        <script src="https://kit.fontawesome.com/f00e0f6e3c.js" crossorigin="anonymous"></script>
-        <script src="http://jan-craft.ddev.site/assets/js/script.js" crossorigin="anonymous"></script>
+        {% js "/assets/js/Tippy.js" %}
+        {% js "/assets/js/disablescroll.js" %}
+
+        {% js "/assets/js/video-overlay.js" %}
+        {% js "https://kit.fontawesome.com/f00e0f6e3c.js" %}
+        {% js "/assets/js/script.js" %}
 
     </body>
 

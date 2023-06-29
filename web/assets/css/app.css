@@ -256,13 +256,31 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
   }
 
   .list-tooltips li {
-    pointer-events: fill;
+    cursor: pointer;;
   }
 
   .list-tooltips li a {
     -webkit-text-decoration-color: var(--primary);
   }
 
+  #tooltip {
+    position: relative;
+    width: fit-content;
+  }
+
+  #tooltip a:first-child,
+  #tooltip div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media only screen and (max-width: 800px) {
+    #tooltip div,
+    #tooltip a:first-child{
+      display: none;
+    }
+  }
 
   /* tooltip style */
 
@@ -271,7 +289,7 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
     flex-direction: column;
     justify-content: space-between;
     padding: 1rem;
-
+    z-index: 5;
     min-width: 250;
     min-height: 5rem;
   }
@@ -282,6 +300,9 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
 
   .tippy-content a:last-child {
     align-self: flex-end;
+    color: var(--blue);
+    text-decoration: underline;
+    cursor: pointer;
   }
 
   @media only screen and (min-width: 800px) {
@@ -320,7 +341,7 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
     height: 100%;
     width: 100%;
     position: fixed;
-    z-index: 10;
+    z-index: 1000;
     background-color: var(--blue-tranparent);
     backdrop-filter: blur(10px);
     visibility: hidden;
@@ -332,21 +353,30 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
     justify-content: center;
   }
 
-  .overlay-content iframe {
-    height: 50vh;
-    width: 90vh;
-    top: 25%;
-    z-index: 1000;
+  .video-wrapper {
+    width: 100vw;
+    height: 100vh;
+    position: sticky;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .video-wrapper iframe {
+    height: 50vw;
+    width: 90vw;
+    z-index: 2000;
     position: sticky;
   }
 
-  @media only screen and (max-width: 800px) {
-    .overlay {
-      display: none;
-      visibility: hidden;
+  @media only screen and (min-width: 800px) {
+    .overlay-content iframe {
+      height: 34vw;
+      width: 60vw;
     }
   }
-
 
   #tooltip a:visited {
     color: black;

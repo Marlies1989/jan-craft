@@ -1,19 +1,16 @@
 columnSuffix: qesramyh
-contentColumnType: text
+contentColumnType: string
 fieldGroup: 6203355f-ec05-4011-95a0-d4f0801c79a9 # Home
 handle: bodyText
 instructions: null
 name: 'Body text'
 searchable: false
 settings:
-  byteLimit: null
-  charLimit: null
-  code: false
-  columnType: null
-  initialRows: 1
-  multiline: true
-  placeholder: null
-  uiMode: normal
+  contentTable: '{{%matrixcontent_bodytext}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: siteGroup
 translationKeyFormat: null
-translationMethod: none
-type: craft\fields\PlainText
+translationMethod: site
+type: craft\fields\Matrix

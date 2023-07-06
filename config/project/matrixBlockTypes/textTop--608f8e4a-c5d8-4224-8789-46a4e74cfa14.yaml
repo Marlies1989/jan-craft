@@ -1,0 +1,46 @@
+field: fccc51ba-e061-4599-a9cc-164ecb83f553 # Body text
+fieldLayouts:
+  5222cb1d-666c-428c-b1d1-b8c7cf64083d:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 1ca90ba0-888b-4e88-bc06-4718c70c8837 # Text above images
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 03db65d0-91ef-4b39-8587-77058acd0b07
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e19da268-1530-4870-8172-b72207139349
+        userCondition: null
+fields:
+  1ca90ba0-888b-4e88-bc06-4718c70c8837: # Text above images
+    columnSuffix: cxmudjhe
+    contentColumnType: text
+    fieldGroup: null
+    handle: textAbove
+    instructions: 'Use this block to place text above the images'
+    name: 'Text above images'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 1
+      multiline: true
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+handle: textTop
+name: 'Text top image'
+sortOrder: 1

@@ -56,6 +56,18 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
+            fieldUid: b13628f2-498a-40a3-a301-e5aa3d89815f # Home page buttons
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 938a4bb8-3d73-4ad5-982c-d80ac6036469
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: 8d70186d-189a-46e4-8cb5-26f7840e9f89 # Page quote block
             instructions: null
             label: null

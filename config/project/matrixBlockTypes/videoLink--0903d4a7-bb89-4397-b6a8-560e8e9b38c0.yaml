@@ -63,7 +63,7 @@ fields:
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
-    translationMethod: none
+    translationMethod: site
     type: craft\fields\PlainText
   ae66b30b-c6c1-4864-a6e8-8d038eb175f3: # Tooltip text
     columnSuffix: rtpmwzce
@@ -83,7 +83,7 @@ fields:
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
-    translationMethod: none
+    translationMethod: site
     type: craft\fields\PlainText
   e8245024-7ebb-490a-a575-04aa23353167: # Video
     columnSuffix: ptymppfb

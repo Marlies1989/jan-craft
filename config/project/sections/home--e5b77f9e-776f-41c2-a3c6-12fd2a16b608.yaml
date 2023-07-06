@@ -4,9 +4,14 @@ handle: home
 name: Home
 propagationMethod: all
 siteSettings:
-  265ed1e3-cc19-48f3-89d9-a079c0f61868: # jan
+  82f78b32-cc26-40ba-b4a1-8b18baea2692: # Introduction to Objectivism - NL
     enabledByDefault: true
     hasUrls: true
     template: index.twig
+    uriFormat: __home__
+  265ed1e3-cc19-48f3-89d9-a079c0f61868: # Introduction to Objectivism - EN
+    enabledByDefault: true
+    hasUrls: true
+    template: null
     uriFormat: __home__
 type: single

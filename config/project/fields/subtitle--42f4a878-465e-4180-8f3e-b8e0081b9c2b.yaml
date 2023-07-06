@@ -15,5 +15,5 @@ settings:
   placeholder: 'Fot those who honestly want to understand'
   uiMode: normal
 translationKeyFormat: null
-translationMethod: none
+translationMethod: site
 type: craft\fields\PlainText

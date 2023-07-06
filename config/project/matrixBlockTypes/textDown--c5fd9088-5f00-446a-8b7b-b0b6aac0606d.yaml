@@ -1,0 +1,46 @@
+field: fccc51ba-e061-4599-a9cc-164ecb83f553 # Body text
+fieldLayouts:
+  51e7a1ae-e686-448b-9bb3-c3629b64fe15:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: fd006f75-2cbe-4a9c-bf21-940ce3c89e30 # Text below images
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 27f87b49-9879-4c72-a0b7-7845f76cbca7
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 589205a1-3fa3-406a-9553-a7e0876c1465
+        userCondition: null
+fields:
+  fd006f75-2cbe-4a9c-bf21-940ce3c89e30: # Text below images
+    columnSuffix: kvhqnhef
+    contentColumnType: text
+    fieldGroup: null
+    handle: textBelow
+    instructions: 'Use this block to place text below the images'
+    name: 'Text below images'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 1
+      multiline: true
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+handle: textDown
+name: 'Text down image'
+sortOrder: 2

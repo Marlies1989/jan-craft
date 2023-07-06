@@ -4,45 +4,52 @@
 
 {% set pageQuoteBlock = entry.pageQuoteBlock %}
 <main>
-  <blockquote> {{ entry.pageQuoteBlock }} </blockquote>
+    {% if entry.pageQuoteBlock is not empty %}
+      <blockquote> "{{ entry.pageQuoteBlock }}"</blockquote>
+    {% endif %}
 
       <div id="home-tekst" class="page-tekst">
         <h3>{{ entry.title }}</h3>
 
-            {% set newLinkToVideo = entry.newLinkToVideo.all() %}
-                {% for contentBlock in newLinkToVideo %}
+           {% set blocks = entry.newLinkToVideo.all() %}
 
-                    {% set blockType = contentBlock.type.handle %}
-
-                        {% if blockType == 'videoLink' %}
-
+           {% if blocks is not empty %}
             <ol class="list-tooltips">
-            <li data-template="1" id="tooltip"><div onclick="openNav(), disableScroll()"></div><a>{{ contentBlock.text }}</a></li>
+               {% for block in blocks %}
+              <li data-template="tooltip-{{ loop.index }}" id="tooltip">
+                <div data-target="video-{{ loop.index }}" onclick="openNav(this), disableScroll()"></div>
+                  <a>{{ block.text }}</a>
+              </li>
+            {% endfor %}
             </ol>
+      </div>
 
-        </div>
 </main>
+         {% for block in blocks %}
 
- <!-- video -->
-   <div id="myNav" class="overlay">
-    <div onclick="closeNav(), enableScroll()" class="overlay-content">
-      <div class="video-wrapper">
-        <iframe width="1280" height="720px" allow="autoplay" src="{{ contentBlock.video }}"></iframe>
-      </div>
-    </div>
+          <!-- video -->
+            <div id="video-{{ loop.index }}" class="overlay">
+              <div onclick="closeNav(this), enableScroll()" class="overlay-content">
+                <div class="video-wrapper">
+                  <iframe width="1280" height="720px" allow="autoplay" allowfullscreen src="{{ block.video }}"></iframe>
+                </div>
+              </div>
+            </div>
 
-<div class="tippy-content" style="display: none;">
-    <div style="display: none;">
-      <div id="loop.length">
-        <h4>{{ contentBlock.text }}</h4>
-        <a>{{ contentBlock.tooltipText }}</a>
-        <a a onclick=" openNav(), disableScroll()">watch video</a>
-      </div>
-    </div>
-</div>
+              <div class="tippy-content" style="display: none;">
+                <div style="display: none;">
+                  <div id="tooltip-{{ loop.index }}">
+                    <h4>{{ block.text }}</h4>
+                      <a>{{ block.tooltipText }}</a>
+                        <a data-target="video-{{ loop.index }}" onclick="openNav(this), disableScroll()">watch video</a>
+                  </div>
+                </div>
+              </div>
+          {% endfor %}
 
-   {% endif %}
+          {% endif %}
 
-   {% endfor %}
+
+   
 
 {% endblock %}

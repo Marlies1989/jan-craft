@@ -15,5 +15,5 @@ settings:
   placeholder: 'Here should be a quote '
   uiMode: normal
 translationKeyFormat: null
-translationMethod: none
+translationMethod: site
 type: craft\fields\PlainText

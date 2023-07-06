@@ -2,11 +2,19 @@ defaultPlacement: end
 enableVersioning: true
 handle: page
 name: Page
-propagationMethod: all
+propagationMethod: siteGroup
 siteSettings:
-  265ed1e3-cc19-48f3-89d9-a079c0f61868: # jan
+  82f78b32-cc26-40ba-b4a1-8b18baea2692: # Introduction to Objectivism - NL
     enabledByDefault: true
     hasUrls: true
-    template: page/_entry2.twig
+    template: page/_entry.twig
+    uriFormat: 'pagina/{slug}'
+  265ed1e3-cc19-48f3-89d9-a079c0f61868: # Introduction to Objectivism - EN
+    enabledByDefault: true
+    hasUrls: true
+    template: page/_entry.twig
     uriFormat: 'page/{slug}'
-type: channel
+structure:
+  maxLevels: null
+  uid: 4988c716-6739-4e82-80f2-099b05343278
+type: structure

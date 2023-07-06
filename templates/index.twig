@@ -3,17 +3,17 @@
 {% block main %}
 
 <main>
-      
-      <img class="background-image" src="assets/img/Background.svg"/>
+      <img class="background-image" src="/assets/img/Background.svg" alt="abstracte achtergrond afbeelding"/>
       <div class="full-screen">
           <h1> {{ entry.pageTitle }} </h1>
             <h2> {{ entry.subtitle }} </h2>
 
           <div class="button-img-box">     
               <div class="button-box">
-                <a onclick="openNav(), disableScroll()" class="button">Who is Ayn Rand</a>
-                <a onclick="openNav(), disableScroll()" class="button blue">Who is Jan de Laat</a>
-                <a onclick="openNav(), disableScroll()" class="button">Set up of this website</a>
+              {% set blocks = entry.buttonHome.all() %}
+                {% for block in blocks %}
+                <a onclick="openNav(this), disableScroll()" data-target="videoHome-{{ loop.index }}" class="button">{{ block.textButton }}</a>
+                {% endfor %}
               </div>
               <figure class="home-image">
                   <img src="/assets/img/AynRand.png" alt="Picture of Ayn Rand">
@@ -28,52 +28,69 @@
         </div>
 
               <div id="home-tekst" class="page-tekst">
-
-                    <p>{{ entry.bodyText|markdown }}</p>
+               {% set blocks = entry.bodyText.all() %}
+                  {% for block in blocks %}
+                    {% if block.type == "textTop" %}
+                      <p>{{ block.textAbove|markdown }}</p>
+                    {% endif %}
+                  {% endfor %}
+              </div>
 
               <div class="figure-box">
                 <div class="figure-box-start">
-                  <figure>
-                        {% set query = entry.image
-                            .id('')
-                            .all() %}
-
-                            {% set blocks = entry.image.all() %}
-
-                            {% for block in blocks %}
-
-                    <a href="{{ block.linkImageTopLeft }}"><img src="{{ block.imagetl.one.getUrl }}" alt="{{ block.altImageTopLeft }}">
-                    <figcaption class="overlay-model">{{ block.titleImageTl }} <br> {{ block.subtitleImgTl }}</figcaption></a>
-
+                 
+                  {% set blocks = entry.image.all() %}
+                    {% for block in blocks %}
+                      {% if block.type == "imagesStart" %}
+                        <figure>
+                          <a href="{{ block.linkTo }}">
+                            <img src="{{ block.image.one.getUrl }}" alt="">
+                              <figcaption class="overlay-model">{{ block.titleImg }} <br> {{ block.subtitle }}
+                              </figcaption>
+                          </a>
+                         </figure>
+                     {% endif %}
                     {% endfor %}
-                  </figure>
-                  <figure>
-                    <a href=""><img src="../Jan/assets/Images/waves.jpg" alt="Golven">
-                      <figcaption class="overlay-model">Man <br> The essence of man's functioning</figcaption></a>
-                  </figure>
                 </div>
+                    
+
                 <div class="figure-box-end">
-                  <figure>
-                    <a href=""><img src="../Jan/assets/Images/waves.jpg" alt="Golven">
-                      <figcaption class="overlay-model">Man <br> The essence of man's functioning</figcaption></a>
-                  </figure>
-                  <figure>
-                    <a href=""><img src="../Jan/assets/Images/waves.jpg" alt="Golven">
-                      <figcaption class="overlay-model">Man <br> The essence of man's functioning</figcaption></a>
-                  </figure>
+                  {% for block in blocks %}
+                    {% if block.type == "imagesEnd" %}
+                      <figure>
+                        <a href="{{ block.linkTo }}">
+                          <img src="{{ block.image.one.getUrl }}" alt="">
+                            <figcaption class="overlay-model">{{ block.titleImg }} <br> {{ block.subtitle }}
+                            </figcaption>
+                        </a>
+                      </figure>
+                    {% endif %}
+                  {% endfor %}
                 </div>
               </div>
 
+              <div class="page-tekst">
+                {% set blocks = entry.bodyText.all() %}
+                  {% for block in blocks %}
+                    {% if block.type == "textDown" %}
+                      <p>{{ block.textBelow|markdown }}</p>
+                    {% endif %}
+                  {% endfor %}
               </div>
+             
     </main>
-     <!-- video -->
-   <div id="myNav" class="overlay">
-    <div onclick="closeNav(), enableScroll()" class="overlay-content">
-      <div class="video-wrapper">
-        <iframe width="1280" height="720px" allow="autoplay" src="https://youtu.be/sDj72zqZakE"></iframe>
-      </div>
-    </div>
-  <!--  -->
-    </div>
+
+     <!-- Link to video -->
+
+      {% set blocks = entry.buttonHome.all() %}
+          {% for block in blocks %}
+            <div id="videoHome-{{ loop.index }}" class="overlay">
+              <div onclick="closeNav(this), enableScroll()" class="overlay-content">
+                <div class="video-wrapper">
+                  <iframe width="1280" height="720px" allow="autoplay" src="{{ block.buttonLink }}"></iframe>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
 
     {% endblock %}

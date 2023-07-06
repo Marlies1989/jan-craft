@@ -1,8 +1,9 @@
 baseUrl: $PRIMARY_SITE_URL
+enabled: true
 handle: default
 hasUrls: true
 language: en-US
-name: jan
+name: 'Introduction to Objectivism - EN'
 primary: true
-siteGroup: 7bf1eeac-7dfd-4084-b314-db5a770f32b7 # jan
+siteGroup: 0d483e42-f0fe-4fa8-aa13-1cfc8ee3b244 # Introduction to Objectivism
 sortOrder: 1

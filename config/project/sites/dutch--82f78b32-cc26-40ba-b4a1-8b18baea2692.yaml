@@ -1,0 +1,9 @@
+baseUrl: '@web/nl'
+enabled: '1'
+handle: dutch
+hasUrls: true
+language: nl-NL
+name: 'Introduction to Objectivism - NL'
+primary: false
+siteGroup: 0d483e42-f0fe-4fa8-aa13-1cfc8ee3b244 # Introduction to Objectivism
+sortOrder: 2

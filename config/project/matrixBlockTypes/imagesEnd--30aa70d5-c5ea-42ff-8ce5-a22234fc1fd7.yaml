@@ -1,96 +1,69 @@
 field: 73966bbe-10c0-4bdf-8bf5-30f8eec4a71d # image
 fieldLayouts:
-  353249d7-de1e-494b-acf3-09fb9bf510d9:
+  dc1a8598-7d99-49f6-b98a-7f6b1201d129:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: 8598f7c2-0831-4e3d-8dea-e92a2ed16977 # ImageTL
+            fieldUid: 2a5146e9-40c6-41e7-8c80-85f1a379c83a # Image
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: e6b84827-9c2a-42e4-bbe4-fb3484435cbd
+            uid: abd62602-b632-44bd-b122-c11eff913a81
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 15cd4cc7-c423-486f-b906-4b7760f352fe # Link Image top left
-            instructions: null
-            label: null
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: ff164195-7e62-46da-88d1-ed5b65f62857
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: bd6d2587-09f1-4414-a792-045ac08e5480 # alt image top left
-            instructions: null
-            label: null
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 9b46b5d0-5846-44e1-a71b-5be199d525d7
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: a85a2bff-c24f-4ca6-a9c3-99ce77942039 # title image tl
+            fieldUid: c0f3ae16-6c5c-4dd9-9172-563ce7f28b97 # Link to page
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: f4063eb7-d8f4-4851-acb2-a97e18d9b1c0
+            uid: 584713df-861d-41a8-af0c-241c52ad70f6
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: f6c65356-4e5d-43ec-a85d-4b87f0424166 # subtitle img tl
+            fieldUid: d338e87d-f777-4c93-acf9-da8686ae46c4 # Title
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 4297d563-bad7-46fb-96dc-1bbe5b92dc68
+            uid: b124986b-5336-447d-b093-9ecfc1904192
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6c90d944-8ad4-42e9-9654-cff5d71a2eb5 # Subtitle
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0ef40b48-cf3a-4a8b-96f2-955e8915257c
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: a44fbcbf-1a6d-4a12-9bfe-0958ced83522
+        uid: 21470927-93a4-47ea-b206-a4f25487c06a
         userCondition: null
 fields:
-  15cd4cc7-c423-486f-b906-4b7760f352fe: # Link Image top left
-    columnSuffix: jrzxhkgu
-    contentColumnType: string(255)
-    fieldGroup: null
-    handle: linkImageTopLeft
-    instructions: null
-    name: 'Link Image top left'
-    searchable: false
-    settings:
-      maxLength: 255
-      types:
-        - url
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Url
-  8598f7c2-0831-4e3d-8dea-e92a2ed16977: # ImageTL
+  2a5146e9-40c6-41e7-8c80-85f1a379c83a: # Image
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
-    handle: imagetl
+    handle: image
     instructions: null
-    name: ImageTL
+    name: Image
     searchable: false
     settings:
       allowSelfRelations: false
@@ -107,7 +80,7 @@ fields:
       minRelations: null
       previewMode: full
       restrictFiles: true
-      restrictLocation: false
+      restrictLocation: true
       restrictedDefaultUploadSubpath: null
       restrictedLocationSource: 'volume:17d48411-08a2-41d0-9888-3831ebc5c957' # Images
       restrictedLocationSubpath: null
@@ -133,13 +106,48 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-  a85a2bff-c24f-4ca6-a9c3-99ce77942039: # title image tl
-    columnSuffix: vkslgqax
+  6c90d944-8ad4-42e9-9654-cff5d71a2eb5: # Subtitle
+    columnSuffix: rociosnl
+    contentColumnType: string(460)
+    fieldGroup: null
+    handle: subtitle
+    instructions: null
+    name: Subtitle
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: 115
+      code: false
+      columnType: null
+      initialRows: 1
+      multiline: true
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  c0f3ae16-6c5c-4dd9-9172-563ce7f28b97: # Link to page
+    columnSuffix: kettdhgh
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: linkTo
+    instructions: null
+    name: 'Link to page'
+    searchable: false
+    settings:
+      maxLength: 255
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  d338e87d-f777-4c93-acf9-da8686ae46c4: # Title
+    columnSuffix: ijhsfmyt
     contentColumnType: text
     fieldGroup: null
-    handle: titleImageTl
+    handle: titleImg
     instructions: null
-    name: 'title image tl'
+    name: Title
     searchable: false
     settings:
       byteLimit: null
@@ -151,48 +159,8 @@ fields:
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
-    translationMethod: none
+    translationMethod: site
     type: craft\fields\PlainText
-  bd6d2587-09f1-4414-a792-045ac08e5480: # alt image top left
-    columnSuffix: hhdduaek
-    contentColumnType: text
-    fieldGroup: null
-    handle: altImageTopLeft
-    instructions: null
-    name: 'alt image top left'
-    searchable: false
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: false
-      columnType: null
-      initialRows: 1
-      multiline: true
-      placeholder: null
-      uiMode: normal
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
-  f6c65356-4e5d-43ec-a85d-4b87f0424166: # subtitle img tl
-    columnSuffix: epuiaudd
-    contentColumnType: text
-    fieldGroup: null
-    handle: subtitleImgTl
-    instructions: null
-    name: 'subtitle img tl'
-    searchable: false
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: false
-      columnType: null
-      initialRows: 1
-      multiline: true
-      placeholder: null
-      uiMode: normal
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
-handle: imagestl
-name: ImagesTL
-sortOrder: 1
+handle: imagesEnd
+name: ImageDown
+sortOrder: 2

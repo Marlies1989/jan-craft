@@ -578,7 +578,7 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
   .figure-box-start > figure > a > img,
   .figure-box-end > figure > a > img {
     max-height: 150px;
-    /* width: auto; */
+    width: auto;
     object-fit: cover;
     transition: transform 1s ease-in-out
   }

@@ -1,0 +1,12 @@
+columnSuffix: kurcjemy
+contentColumnType: string
+fieldGroup: ba8ef6bd-e3fa-4800-bdb3-3d8263d46e4c # globals
+handle: mailToFooter
+instructions: 'To which mail address will they send their e-mail'
+name: 'Mail adres footer'
+searchable: false
+settings:
+  placeholder: jan@twokings.nl
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Email

@@ -1,4 +1,4 @@
-dateModified: 1688650541
+dateModified: 1688991541
 email:
   fromEmail: marlies@twokings.nl
   fromName: jan
@@ -24,6 +24,7 @@ meta:
     17d48411-08a2-41d0-9888-3831ebc5c957: Images # Images
     30aa70d5-c5ea-42ff-8ce5-a22234fc1fd7: ImageDown # ImageDown
     42f4a878-465e-4180-8f3e-b8e0081b9c2b: Subtitle # Subtitle
+    46b95784-2b45-4bce-9d31-b138d113a8f7: 'color button' # color button
     75d745af-6a2c-48a6-973d-df05ecab1367: ImagesTop # ImagesTop
     82b380ba-a677-4184-91d8-adc4d50000c0: Text # Text
     82f78b32-cc26-40ba-b4a1-8b18baea2692: 'Introduction to Objectivism - NL' # Introduction to Objectivism - NL
@@ -37,11 +38,13 @@ meta:
     8598f7c2-0831-4e3d-8dea-e92a2ed16977: Image # Image
     48294a00-c556-4362-98ed-39d50842648a: 'Button Jan' # Button Jan
     73966bbe-10c0-4bdf-8bf5-30f8eec4a71d: image # image
+    2506222b-00f2-4f61-945a-d172e11ef238: footer # footer
     6203355f-ec05-4011-95a0-d4f0801c79a9: Home # Home
     18979315-3938-4daa-b958-d3eb5577f881: Home # Home
     a85a2bff-c24f-4ca6-a9c3-99ce77942039: Title # Title
     ae66b30b-c6c1-4864-a6e8-8d038eb175f3: 'Tooltip text' # Tooltip text
     b13628f2-498a-40a3-a301-e5aa3d89815f: 'Home page buttons' # Home page buttons
+    ba8ef6bd-e3fa-4800-bdb3-3d8263d46e4c: globals # globals
     bb965430-2a55-4bf4-a467-986de4e6ffe0: 'Page title' # Page title
     bd6d2587-09f1-4414-a792-045ac08e5480: 'alt image top left' # alt image top left
     bdf50829-8d56-4739-a3de-37c2c65ebbb0: 'Text button' # Text button
@@ -50,6 +53,7 @@ meta:
     d5f4b7ca-0879-4fc2-90a1-cc06a2117032: 'Button Set up' # Button Set up
     d24fe423-610b-4df8-919c-3b5b77a1b5c1: Text # Text
     d338e87d-f777-4c93-acf9-da8686ae46c4: Title # Title
+    dd0e141c-3155-42dc-ac0a-01257b544042: 'Mail adres footer' # Mail adres footer
     e07b8959-9189-4c89-b35d-b1b406cdfd6a: Page # Page
     e5b77f9e-776f-41c2-a3c6-12fd2a16b608: Home # Home
     e8245024-7ebb-490a-a575-04aa23353167: Video # Video
@@ -65,9 +69,10 @@ plugins:
 system:
   edition: solo
   live: true
-  name: jan
+  name: 'Introduction to Objectivism'
+  retryDuration: null
   schemaVersion: 4.4.0.4
-  timeZone: America/Los_Angeles
+  timeZone: Europe/Amsterdam
 users:
   allowPublicRegistration: false
   defaultGroup: null

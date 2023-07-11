@@ -11,16 +11,22 @@
           <div class="button-img-box">     
               <div class="button-box">
               {% set blocks = entry.buttonHome.all() %}
-                {% for block in blocks %}
-                <a onclick="openNav(this), disableScroll()" data-target="videoHome-{{ loop.index }}" class="button">{{ block.textButton }}</a>
-                {% endfor %}
+                {% if blocks is not empty %}
+                  {% for block in blocks %}
+                    <a onclick="openNav(this), disableScroll()" data-target="videoHome-{{ loop.index }}"
+                    {{ block.colorButton == 'blue' ? 'class="blue button"': 'class="button"'}}>{{ block.textButton }}</a>
+                  {% endfor %}
+                {% endif %}
               </div>
+              
               <figure class="home-image">
                   <img src="/assets/img/AynRand.png" alt="Picture of Ayn Rand">
               </figure>
             </div>
 
-            <blockquote class="quote-menu">“{{ entry.pageQuoteBlock }}”</blockquote>
+            {% if entry.pageQuoteBlock is not empty %}
+              <blockquote class="quote-menu">“{{ entry.pageQuoteBlock }}”</blockquote>
+            {% endif %}
             
             <figure class="scroll">
               <a href="#home-tekst"><img src="/assets/img/arrow_down.svg" alt="Scroll arrow down"></a>
@@ -38,35 +44,37 @@
 
               <div class="figure-box">
                 <div class="figure-box-start">
-                 
                   {% set blocks = entry.image.all() %}
-                    {% for block in blocks %}
-                      {% if block.type == "imagesStart" %}
-                        <figure>
-                          <a href="{{ block.linkTo }}">
-                            <img src="{{ block.image.one.getUrl }}" alt="">
-                              <figcaption class="overlay-model">{{ block.titleImg }} <br> {{ block.subtitle }}
-                              </figcaption>
-                          </a>
-                         </figure>
-                     {% endif %}
-                    {% endfor %}
+                    {% if blocks is not empty %}
+                      {% for block in blocks %}
+                        {% if block.type == "imagesStart"%}
+                          <figure>
+                            <a href="{{ block.linkTo }}">
+                              {% if block.image is not empty %}
+                              <img src="{{ block.image.one.getUrl }}" alt="" width="350" height="350">
+                              {% endif %}
+                                <figcaption class="overlay-model">{{ block.titleImg }} <br> {{ block.subtitle }}
+                                </figcaption>
+                            </a>
+                          </figure>
+                        {% endif %}
+                      {% endfor %}
                 </div>
-                    
 
-                <div class="figure-box-end">
-                  {% for block in blocks %}
-                    {% if block.type == "imagesEnd" %}
-                      <figure>
-                        <a href="{{ block.linkTo }}">
-                          <img src="{{ block.image.one.getUrl }}" alt="">
-                            <figcaption class="overlay-model">{{ block.titleImg }} <br> {{ block.subtitle }}
-                            </figcaption>
-                        </a>
-                      </figure>
+                      <div class="figure-box-end">
+                        {% for block in blocks %}
+                          {% if block.type == "imagesEnd" %}
+                            <figure>
+                              <a href="{{ block.linkTo }}">
+                                <img src="{{ block.image.one.getUrl }}" alt="" width="350" height="350">
+                                  <figcaption class="overlay-model">{{ block.titleImg }} <br> {{ block.subtitle }}
+                                  </figcaption>
+                              </a>
+                            </figure>
+                          {% endif %}
+                        {% endfor %}
                     {% endif %}
-                  {% endfor %}
-                </div>
+                      </div>
               </div>
 
               <div class="page-tekst">
@@ -83,6 +91,7 @@
      <!-- Link to video -->
 
       {% set blocks = entry.buttonHome.all() %}
+        {% if blocks is not empty %}
           {% for block in blocks %}
             <div id="videoHome-{{ loop.index }}" class="overlay">
               <div onclick="closeNav(this), enableScroll()" class="overlay-content">
@@ -92,5 +101,6 @@
               </div>
             </div>
           {% endfor %}
+        {% endif %}
 
     {% endblock %}

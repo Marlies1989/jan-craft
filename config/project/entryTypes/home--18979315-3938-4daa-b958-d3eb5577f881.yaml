@@ -68,6 +68,18 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
+            fieldUid: 425c7550-df9c-4566-bc79-f7103ba652c8
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ff7618b8-661c-460b-847b-f09bc5f853cc
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: 8d70186d-189a-46e4-8cb5-26f7840e9f89 # Page quote block
             instructions: null
             label: null

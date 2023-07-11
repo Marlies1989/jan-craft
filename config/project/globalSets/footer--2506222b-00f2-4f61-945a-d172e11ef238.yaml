@@ -1,0 +1,24 @@
+fieldLayouts:
+  f288f287-d0ce-4e0d-9cc7-3bfa7128d62d:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: dd0e141c-3155-42dc-ac0a-01257b544042 # Mail adres footer
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 43d82165-58c9-4c94-a237-66e17877d1d1
+            userCondition: null
+            warning: null
+            width: 100
+        name: Footer
+        uid: 80bed3eb-668d-4ac7-8df9-8a01ea4f698a
+        userCondition: null
+handle: footer
+name: footer
+sortOrder: 1

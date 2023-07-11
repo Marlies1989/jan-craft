@@ -3,53 +3,47 @@
 {% block main %}
 
 {% set pageQuoteBlock = entry.pageQuoteBlock %}
-<main>
-    {% if entry.pageQuoteBlock is not empty %}
-      <blockquote> "{{ entry.pageQuoteBlock }}"</blockquote>
-    {% endif %}
+    <main>
+        {% if entry.pageQuoteBlock is not empty %}
+          <blockquote> "{{ entry.pageQuoteBlock }}"</blockquote>
+        {% endif %}
 
-      <div id="home-tekst" class="page-tekst">
-        <h3>{{ entry.title }}</h3>
+          <div id="home-tekst" class="page-tekst">
+            <h3>{{ entry.title }}</h3>
 
-           {% set blocks = entry.newLinkToVideo.all() %}
+              {% set blocks = entry.newLinkToVideo.all() %}
+                {% if blocks is not empty %}
+                  <ol class="list-tooltips">
+                    {% for block in blocks %}
+                      <li data-template="tooltip-{{ loop.index }}" id="tooltip">
+                        <div data-target="video-{{ loop.index }}" onclick="openNav(this), disableScroll()"></div>
+                          <a>{{ block.text }}</a>
+                      </li>
+                    {% endfor %}
+                  </ol>
+          </div>
 
-           {% if blocks is not empty %}
-            <ol class="list-tooltips">
-               {% for block in blocks %}
-              <li data-template="tooltip-{{ loop.index }}" id="tooltip">
-                <div data-target="video-{{ loop.index }}" onclick="openNav(this), disableScroll()"></div>
-                  <a>{{ block.text }}</a>
-              </li>
-            {% endfor %}
-            </ol>
-      </div>
-
-</main>
-         {% for block in blocks %}
-
-          <!-- video -->
-            <div id="video-{{ loop.index }}" class="overlay">
-              <div onclick="closeNav(this), enableScroll()" class="overlay-content">
-                <div class="video-wrapper">
-                  <iframe width="1280" height="720px" allow="autoplay" allowfullscreen src="{{ block.video }}"></iframe>
-                </div>
-              </div>
-            </div>
-
-              <div class="tippy-content" style="display: none;">
-                <div style="display: none;">
-                  <div id="tooltip-{{ loop.index }}">
-                    <h4>{{ block.text }}</h4>
-                      <a>{{ block.tooltipText }}</a>
-                        <a data-target="video-{{ loop.index }}" onclick="openNav(this), disableScroll()">watch video</a>
+    </main>
+              {% for block in blocks %}
+                <!-- video -->
+                  <div id="video-{{ loop.index }}" class="overlay">
+                    <div onclick="closeNav(this), enableScroll()" class="overlay-content">
+                      <div class="video-wrapper">
+                        <iframe width="1280" height="720px" allow="autoplay" allowfullscreen src="{{ block.video }}"></iframe>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-          {% endfor %}
 
+                    <div class="tippy-content" style="display: none;">
+                      <div style="display: none;">
+                        <div id="tooltip-{{ loop.index }}">
+                          <h4>{{ block.text }}</h4>
+                            <a>{{ block.tooltipText }}</a>
+                              <a data-target="video-{{ loop.index }}" onclick="openNav(this), disableScroll()">watch video</a>
+                        </div>
+                      </div>
+                    </div>
+                {% endfor %}
           {% endif %}
-
-
-   
-
+          
 {% endblock %}

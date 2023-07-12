@@ -1,4 +1,4 @@
-dateModified: 1688991541
+dateModified: 1689165732
 email:
   fromEmail: marlies@twokings.nl
   fromName: jan
@@ -51,6 +51,7 @@ meta:
     c0f3ae16-6c5c-4dd9-9172-563ce7f28b97: 'Link to page' # Link to page
     c5fd9088-5f00-446a-8b7b-b0b6aac0606d: 'Text down image' # Text down image
     d5f4b7ca-0879-4fc2-90a1-cc06a2117032: 'Button Set up' # Button Set up
+    d7e01790-6650-495b-8e78-6ac0c6947a51: Homepage # Homepage
     d24fe423-610b-4df8-919c-3b5b77a1b5c1: Text # Text
     d338e87d-f777-4c93-acf9-da8686ae46c4: Title # Title
     dd0e141c-3155-42dc-ac0a-01257b544042: 'Mail adres footer' # Mail adres footer
@@ -67,7 +68,7 @@ plugins:
     enabled: true
     schemaVersion: 0.0.0
 system:
-  edition: solo
+  edition: pro
   live: true
   name: 'Introduction to Objectivism'
   retryDuration: null

@@ -548,9 +548,16 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
     overflow: hidden;
   }
 
+  figure {
+    display: flex;
+    flex-direction: column;
+  }
+
   .overlay-model {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     position: absolute;
-    padding-block-start: 20%;
     padding-block-end: 10%;
     padding-inline-start: 5%;
     padding-inline-end: 5%;
@@ -577,7 +584,7 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
 
   .figure-box-start > figure > a > img,
   .figure-box-end > figure > a > img {
-    max-height: 150px;
+    max-height: 200px;
     width: auto;
     object-fit: cover;
     transition: transform 1s ease-in-out

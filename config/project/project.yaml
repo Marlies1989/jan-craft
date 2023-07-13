@@ -1,4 +1,4 @@
-dateModified: 1689165732
+dateModified: 1689237981
 email:
   fromEmail: marlies@twokings.nl
   fromName: jan
@@ -35,6 +35,7 @@ meta:
     608f8e4a-c5d8-4224-8789-46a4e74cfa14: 'Text top image' # Text top image
     0903d4a7-bb89-4397-b6a8-560e8e9b38c0: VideoLink # VideoLink
     963c1f65-1bfd-41ed-aa2a-bc609f386a49: Page # Page
+    8457f91c-14fe-4fda-b86b-4b505fa04d8e: error404 # error404
     8598f7c2-0831-4e3d-8dea-e92a2ed16977: Image # Image
     48294a00-c556-4362-98ed-39d50842648a: 'Button Jan' # Button Jan
     73966bbe-10c0-4bdf-8bf5-30f8eec4a71d: image # image
@@ -47,6 +48,7 @@ meta:
     ba8ef6bd-e3fa-4800-bdb3-3d8263d46e4c: globals # globals
     bb965430-2a55-4bf4-a467-986de4e6ffe0: 'Page title' # Page title
     bd6d2587-09f1-4414-a792-045ac08e5480: 'alt image top left' # alt image top left
+    bd16d2c4-7fbf-403d-8972-82ce513feec5: error404 # error404
     bdf50829-8d56-4739-a3de-37c2c65ebbb0: 'Text button' # Text button
     c0f3ae16-6c5c-4dd9-9172-563ce7f28b97: 'Link to page' # Link to page
     c5fd9088-5f00-446a-8b7b-b0b6aac0606d: 'Text down image' # Text down image

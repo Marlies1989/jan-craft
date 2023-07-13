@@ -1,0 +1,29 @@
+defaultPlacement: end
+enableVersioning: true
+handle: error404
+name: error404
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  82f78b32-cc26-40ba-b4a1-8b18baea2692: # Introduction to Objectivism - NL
+    enabledByDefault: true
+    hasUrls: true
+    template: _404.twig
+    uriFormat: error404
+  265ed1e3-cc19-48f3-89d9-a079c0f61868: # Introduction to Objectivism - EN
+    enabledByDefault: true
+    hasUrls: true
+    template: _404.twig
+    uriFormat: error404
+type: single

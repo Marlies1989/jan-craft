@@ -51,9 +51,15 @@
                           <figure>
                             <a href="{{ block.linkTo }}">
                                 {% if block.image is not empty %}
-                                  {# {{ block.image.one.getImg({ width: 350, height: 350 }, ['1x', '2x', '3x']) }} #}
-                                  {{ block.image.one.getImg('homepage') }}
-                                {% endif %}
+                                  {% set asset = block.image.one %}
+                                    {% do asset.setTransform({ width: 200, height: 200 }) %}
+                                      {{ tag('img', {
+                                        src: asset.url,
+                                        srcset: asset.getSrcset(['200', '350', '700']),
+                                        sizes: '(min-width: 800px) 350px, 200px',
+                                        alt: asset.title,
+                                      }) }}
+                                  {% endif %}
                                 <figcaption class="overlay-model">{{ block.titleImg }} <br> {{ block.subtitle }}
                                 </figcaption>
                             </a>
@@ -65,23 +71,22 @@
                       <div class="figure-box-end">
                         {% for block in blocks %}
                           {% if block.type == "imagesEnd" %}
-                     
                             <figure>
                               <a href="{{ block.linkTo }}">
                                 {% if block.image is not empty %}
-                                  {# {{ block.image.one.getImg({ width: 350, height: 350 }, ['1x', '2x', '3x']) }} #}
-                                  {{ block.image.one.getImg('homepage') }}
-                                {% endif %}
+                                  {% set asset = block.image.one %}
+                                    {% do asset.setTransform({ width: 200, height: 200 }) %}
+                                      {{ tag('img', {
+                                        src: asset.url,
+                                        srcset: asset.getSrcset(['200', '350', '700']),
+                                        sizes: '(min-width: 800px) 350px, 200px',
+                                        alt: asset.title,
+                                      }) }}
+                                  {% endif %}
                                   <figcaption class="overlay-model">{{ block.titleImg }} <br> {{ block.subtitle }}
                                   </figcaption>
                               </a>
                             </figure>
-{# 
-                              <picture>
-                                <source media="(min-width:650px)" srcset="{{ block.image.one.getUrl }}">
-                                <source media="(min-width:465px)" srcset="{{ block.image.one.getUrl }}">
-                                <img src="{{ block.image.one.getUrl }}" alt="Flowers" style="width:auto;">
-                              </picture> #}
                           {% endif %}
                         {% endfor %}
                     {% endif %}

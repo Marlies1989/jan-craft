@@ -50,7 +50,7 @@ fields:
     contentColumnType: string(255)
     fieldGroup: null
     handle: buttonLink
-    instructions: 'Use this block to link to the movie Who is Ayn.'
+    instructions: 'Use this block to link to the video'
     name: 'Button link'
     searchable: false
     settings:
@@ -65,7 +65,7 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: colorButton
-    instructions: 'Select blue for a blue button'
+    instructions: 'Select the color for the button'
     name: 'color button'
     searchable: false
     settings:

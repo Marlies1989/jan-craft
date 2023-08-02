@@ -1,4 +1,4 @@
-dateModified: 1689237981
+dateModified: 1690811099
 email:
   fromEmail: marlies@twokings.nl
   fromName: jan
@@ -17,6 +17,8 @@ meta:
     1ca90ba0-888b-4e88-bc06-4718c70c8837: 'Text above images' # Text above images
     2a5146e9-40c6-41e7-8c80-85f1a379c83a: Image # Image
     3c3c2748-a395-4807-ae7b-863ff414f70f: 'Quote block' # Quote block
+    04f882cb-e66e-4ab0-b24b-302c336e7e59: 'Tooltip text' # Tooltip text
+    5a077f9e-0d65-45c9-a2d2-622613e71b97: Text # Text
     6c90d944-8ad4-42e9-9654-cff5d71a2eb5: Subtitle # Subtitle
     8d70186d-189a-46e4-8cb5-26f7840e9f89: 'Page quote block' # Page quote block
     9fc21fc7-5cd2-4df8-a32b-af30bbc6ee10: 'Button link' # Button link
@@ -33,12 +35,15 @@ meta:
     164b033e-23e2-4fe7-85a9-4e36827e9099: Page # Page
     265ed1e3-cc19-48f3-89d9-a079c0f61868: 'Introduction to Objectivism - EN' # Introduction to Objectivism - EN
     608f8e4a-c5d8-4224-8789-46a4e74cfa14: 'Text top image' # Text top image
+    846a6bce-8c3e-4450-adad-d39e28b7c291: 'Tool tip text' # Tool tip text
     0903d4a7-bb89-4397-b6a8-560e8e9b38c0: VideoLink # VideoLink
     963c1f65-1bfd-41ed-aa2a-bc609f386a49: Page # Page
     8457f91c-14fe-4fda-b86b-4b505fa04d8e: error404 # error404
     8598f7c2-0831-4e3d-8dea-e92a2ed16977: Image # Image
     48294a00-c556-4362-98ed-39d50842648a: 'Button Jan' # Button Jan
+    51458a3d-3119-4de5-a8c9-74c1fe4275c5: Video # Video
     73966bbe-10c0-4bdf-8bf5-30f8eec4a71d: image # image
+    213866f5-16ef-4f82-b4dc-6f558a05dc79: text # text
     2506222b-00f2-4f61-945a-d172e11ef238: footer # footer
     6203355f-ec05-4011-95a0-d4f0801c79a9: Home # Home
     18979315-3938-4daa-b958-d3eb5577f881: Home # Home
@@ -46,12 +51,15 @@ meta:
     ae66b30b-c6c1-4864-a6e8-8d038eb175f3: 'Tooltip text' # Tooltip text
     b13628f2-498a-40a3-a301-e5aa3d89815f: 'Home page buttons' # Home page buttons
     ba8ef6bd-e3fa-4800-bdb3-3d8263d46e4c: globals # globals
+    bb99b447-d6de-48ad-a5e4-b7d697711268: Title # Title
     bb965430-2a55-4bf4-a467-986de4e6ffe0: 'Page title' # Page title
     bd6d2587-09f1-4414-a792-045ac08e5480: 'alt image top left' # alt image top left
     bd16d2c4-7fbf-403d-8972-82ce513feec5: error404 # error404
     bdf50829-8d56-4739-a3de-37c2c65ebbb0: 'Text button' # Text button
+    bef1e46c-8207-4889-bb8d-eab7bbc4e478: Video # Video
     c0f3ae16-6c5c-4dd9-9172-563ce7f28b97: 'Link to page' # Link to page
     c5fd9088-5f00-446a-8b7b-b0b6aac0606d: 'Text down image' # Text down image
+    ccf6c9e6-8c66-41ea-805d-828ae8593a9e: 'Tooltip text' # Tooltip text
     d5f4b7ca-0879-4fc2-90a1-cc06a2117032: 'Button Set up' # Button Set up
     d7e01790-6650-495b-8e78-6ac0c6947a51: Homepage # Homepage
     d24fe423-610b-4df8-919c-3b5b77a1b5c1: Text # Text
@@ -61,6 +69,7 @@ meta:
     e5b77f9e-776f-41c2-a3c6-12fd2a16b608: Home # Home
     e8245024-7ebb-490a-a575-04aa23353167: Video # Video
     f6c65356-4e5d-43ec-a85d-4b87f0424166: Subtitle # Subtitle
+    f96cb579-edeb-4d96-aecf-442343bf0b20: Video # Video
     fccc51ba-e061-4599-a9cc-164ecb83f553: 'Body text' # Body text
     fd006f75-2cbe-4a9c-bf21-940ce3c89e30: 'Text below images' # Text below images
     ff3bd4b8-4998-4021-a840-4bc13786292f: 'alt image top right' # alt image top right
@@ -70,7 +79,7 @@ plugins:
     enabled: true
     schemaVersion: 0.0.0
 system:
-  edition: pro
+  edition: solo
   live: true
   name: 'Introduction to Objectivism'
   retryDuration: null

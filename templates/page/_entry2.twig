@@ -1,0 +1,49 @@
+{% extends '_layout/_base.twig' %}
+
+{% block main %}
+
+{% set pageQuoteBlock = entry.pageQuoteBlock %}
+    <main>
+        {% if entry.pageQuoteBlock is not empty %}
+          <blockquote> "{{ entry.pageQuoteBlock }}"</blockquote>
+        {% endif %}
+
+          <div id="home-tekst" class="page-tekst">
+            <h3>{{ entry.title }}</h3>
+
+              {% set blocks = entry.newLinkToVideo.all() %}
+                {% if blocks is not empty %}
+                  <ol class="list-tooltips">
+                    {% for block in blocks %}
+                      <li data-template="tooltip-{{ loop.index }}" id="tooltip">
+                        <div id="buttonVideo" data-target="video-{{ loop.index }}"></div>
+                          <a>{{ block.text }}</a>
+                      </li>
+                    {% endfor %}
+                  </ol>
+          </div>
+
+    </main>
+              {% for block in blocks %}
+                  <!-- The Modal -->
+                  <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <iframe width="1280" height="720px" allow="autoplay" allowfullscreen src="{{ block.video }}"></iframe>
+                    </div>
+                  </div>
+
+                    <div class="tippy-content" style="display: none;">
+                      <div style="display: none;">
+                        <div id="tooltip-{{ loop.index }}">
+                          <h4>{{ block.text }}</h4>
+                            <a>{{ block.tooltipText }}</a>
+                              <a data-target="video-{{ loop.index }}">watch video</a>
+                        </div>
+                      </div>
+                    </div>
+                {% endfor %}
+          {% endif %}
+          
+{% endblock %}

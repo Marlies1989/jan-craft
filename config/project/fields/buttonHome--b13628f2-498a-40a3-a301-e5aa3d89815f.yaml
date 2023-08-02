@@ -7,7 +7,7 @@ name: 'Home page buttons'
 searchable: false
 settings:
   contentTable: '{{%matrixcontent_buttonhome}}'
-  maxBlocks: null
+  maxBlocks: 3
   minBlocks: null
   propagationKeyFormat: null
   propagationMethod: siteGroup

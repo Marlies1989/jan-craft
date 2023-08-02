@@ -7,7 +7,7 @@ name: 'Body text'
 searchable: false
 settings:
   contentTable: '{{%matrixcontent_bodytext}}'
-  maxBlocks: null
+  maxBlocks: 1
   minBlocks: null
   propagationKeyFormat: null
   propagationMethod: siteGroup

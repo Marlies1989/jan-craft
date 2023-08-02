@@ -7,7 +7,7 @@ name: image
 searchable: false
 settings:
   contentTable: '{{%matrixcontent_image}}'
-  maxBlocks: null
+  maxBlocks: 2
   minBlocks: null
   propagationKeyFormat: null
   propagationMethod: siteGroup

@@ -1,4 +1,4 @@
-dateModified: 1697103866
+dateModified: 1700474794
 email:
   fromEmail: marlies@twokings.nl
   fromName: jan
@@ -44,6 +44,7 @@ meta:
     6203355f-ec05-4011-95a0-d4f0801c79a9: Home # Home
     18979315-3938-4daa-b958-d3eb5577f881: Home # Home
     a85a2bff-c24f-4ca6-a9c3-99ce77942039: Title # Title
+    a9468521-c1b5-4838-869c-bde818309a09: header-image # header-image
     ae66b30b-c6c1-4864-a6e8-8d038eb175f3: 'Tooltip text' # Tooltip text
     b44e8e0b-1535-42d9-83ce-a22c8ee38a50: video # video
     b13628f2-498a-40a3-a301-e5aa3d89815f: 'Home page buttons' # Home page buttons

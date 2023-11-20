@@ -19,13 +19,16 @@
                 {% endif %}
               </div>
               
+              {% set headerImage = entry.headerImage.one %}
+              {% if entry.headerImage is not empty %}
               <figure class="home-image">
-                  <img src="/assets/img/AynRand.png" alt="Picture of Ayn Rand">
+                  <img src="{{ headerImage.url }}" alt="Picture of Ayn Rand">
               </figure>
+              {% endif %}
             </div>
 
             {% if entry.pageQuoteBlock is not empty %}
-              <blockquote class="quote-menu">“{{ entry.pageQuoteBlock }}”</blockquote>
+              <blockquote class="quote-home">“{{ entry.pageQuoteBlock }}”</blockquote>
             {% endif %}
             
             <figure class="scroll">

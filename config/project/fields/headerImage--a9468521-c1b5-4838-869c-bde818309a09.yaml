@@ -1,0 +1,48 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 6203355f-ec05-4011-95a0-d4f0801c79a9 # Home
+handle: headerImage
+instructions: 'Change the image at the header of the page '
+name: header-image
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowSubfolders: false
+  allowUploads: true
+  allowedKinds:
+    - image
+  branchLimit: null
+  defaultUploadLocationSource: 'volume:17d48411-08a2-41d0-9888-3831ebc5c957' # Images
+  defaultUploadLocationSubpath: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  previewMode: full
+  restrictFiles: true
+  restrictLocation: false
+  restrictedDefaultUploadSubpath: null
+  restrictedLocationSource: 'volume:17d48411-08a2-41d0-9888-3831ebc5c957' # Images
+  restrictedLocationSubpath: null
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Asset
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\assets\AssetCondition
+  selectionLabel: null
+  showSiteMenu: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

@@ -524,7 +524,12 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
     width: auto;
     max-height: 150px;
     object-fit: scale-down;
-  }
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
 
   blockquote {
     font-family: var(--italicBoldBertold);
@@ -537,7 +542,7 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
     color: var(--primary);
   }
 
-  .quote-menu {
+  .quote-home {
     color: black;
   }
 
@@ -718,9 +723,7 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
     }
 
     .home-image > img {
-      width: auto;
       max-height: 250px;
-      object-fit: scale-down;
     }
 
     main {

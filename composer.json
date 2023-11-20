@@ -22,7 +22,7 @@
     "sort-packages": true,
     "optimize-autoloader": true,
     "platform": {
-      "php": "7.4.33"
+      "php": "8.0.2"
     }
   },
   "scripts": {

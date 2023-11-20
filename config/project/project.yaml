@@ -1,4 +1,4 @@
-dateModified: 1689237981
+dateModified: 1697103866
 email:
   fromEmail: marlies@twokings.nl
   fromName: jan
@@ -33,6 +33,7 @@ meta:
     164b033e-23e2-4fe7-85a9-4e36827e9099: Page # Page
     265ed1e3-cc19-48f3-89d9-a079c0f61868: 'Introduction to Objectivism - EN' # Introduction to Objectivism - EN
     608f8e4a-c5d8-4224-8789-46a4e74cfa14: 'Text top image' # Text top image
+    797ef597-7416-4d50-a54d-d3a4d9e5f5a2: Tooltip # Tooltip
     0903d4a7-bb89-4397-b6a8-560e8e9b38c0: VideoLink # VideoLink
     963c1f65-1bfd-41ed-aa2a-bc609f386a49: Page # Page
     8457f91c-14fe-4fda-b86b-4b505fa04d8e: error404 # error404
@@ -44,6 +45,7 @@ meta:
     18979315-3938-4daa-b958-d3eb5577f881: Home # Home
     a85a2bff-c24f-4ca6-a9c3-99ce77942039: Title # Title
     ae66b30b-c6c1-4864-a6e8-8d038eb175f3: 'Tooltip text' # Tooltip text
+    b44e8e0b-1535-42d9-83ce-a22c8ee38a50: video # video
     b13628f2-498a-40a3-a301-e5aa3d89815f: 'Home page buttons' # Home page buttons
     ba8ef6bd-e3fa-4800-bdb3-3d8263d46e4c: globals # globals
     bb965430-2a55-4bf4-a467-986de4e6ffe0: 'Page title' # Page title
@@ -55,6 +57,7 @@ meta:
     d5f4b7ca-0879-4fc2-90a1-cc06a2117032: 'Button Set up' # Button Set up
     d7e01790-6650-495b-8e78-6ac0c6947a51: Homepage # Homepage
     d24fe423-610b-4df8-919c-3b5b77a1b5c1: Text # Text
+    d29bfaed-96f3-4293-9ef2-3dc26651b007: Text # Text
     d338e87d-f777-4c93-acf9-da8686ae46c4: Title # Title
     dd0e141c-3155-42dc-ac0a-01257b544042: 'Mail adres footer' # Mail adres footer
     e07b8959-9189-4c89-b35d-b1b406cdfd6a: Page # Page
@@ -65,16 +68,20 @@ meta:
     fd006f75-2cbe-4a9c-bf21-940ce3c89e30: 'Text below images' # Text below images
     ff3bd4b8-4998-4021-a840-4bc13786292f: 'alt image top right' # alt image top right
 plugins:
+  seo:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.2.0
   site-switcher:
     edition: standard
     enabled: true
     schemaVersion: 0.0.0
 system:
-  edition: pro
+  edition: solo
   live: true
   name: 'Introduction to Objectivism'
   retryDuration: null
-  schemaVersion: 4.4.0.4
+  schemaVersion: 4.5.3.0
   timeZone: Europe/Amsterdam
 users:
   allowPublicRegistration: false
